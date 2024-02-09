@@ -390,7 +390,72 @@ main #menu.container .carta>div{
 
 /* ------ FINAL TODAYS MENU --------------*/
 
+/*INICIO DE BLOG*/
 
+
+#news{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  column-gap: 10px;
+  & figure{
+       position: relative;
+       margin-bottom: 20px;
+    & div.etiqueta {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      background-color: #fa573a99;
+      position: absolute;
+      top: 0;
+      
+      & p{
+        color: white;
+        font-weight: 700;
+        width: 50px;
+        text-align: center;
+        line-height: 20px;
+      }
+    }    
+  }
+  & div{
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+  }
+  & .texto{
+    width: 100%;
+    padding: 0  3%;
+
+    & h3{
+      font-size: 1.2rem;
+    }
+    & h4{
+      color: var(--colorprincipal);
+      font-weight: 700;
+      padding: 15px 0;
+      font-size: 0.9rem;
+    }
+    & p{
+      line-height: 22px;
+      margin-bottom: 15px;
+      color: #666;
+    }
+
+    & a {
+      text-decoration: none;
+      color: var(--colorprincipal);
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+  }
+
+}
+/*FINAL DE BLOG*/
 
 
 /* ------ INICIO MEDIA QUERIES --------------*/
