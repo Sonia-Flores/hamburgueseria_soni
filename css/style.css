@@ -313,21 +313,58 @@ section#aboutus figure:hover :is(.imagen, .marco) {
 /* ------ INICIO TODAYS MENU --------------*/
 
 .todaymenu {
-  padding: 3.75rem 0;
+  padding-top: 3.75rem;
   background-color: var(--colorsecundario);
 
-  & .container h2 {
+  & h2 {
     color: white;
   }
 }
 
-.menu-desayunos {
-  & nav {
+main #menu.container {
+  display: flex;
+  flex: wrap;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+main #menu.container .carta{
+  & div figure{
+    margin-bottom: 1.25rem;
+  }
+  & div>div{
     color: white;
-    margin: 40px 0;
+    line-height: 2.2rem;
+    
+    & h3{
+      font-weight: 700;
+
+      & span{
+        color: var(--colorprincipal);
+        padding-left: 1.7rem;
+      }
+    }
+
+    & a{
+      text-decoration: none;
+      color: var(--colorprincipal);
+      font-weight: 700;
+    }
+  }
+}
+
+main #menu.container .carta>div{
+  padding: var(--margingrid) 0;
+}
+
+.menu-desayunos {
+  color: white;
+
+  & nav {
+      margin: 2.5rem 0;
 
     & li {
-      padding: 10px;
+      padding: 0.625rem;
     }
 
     & .select {
@@ -336,7 +373,8 @@ section#aboutus figure:hover :is(.imagen, .marco) {
   }
 
   & div {
-    color: white;
+    
+    margin: 40px 0;
 
     & h3 {
       font-weight: 700;
@@ -344,13 +382,16 @@ section#aboutus figure:hover :is(.imagen, .marco) {
 
     & hr {
       width: 2.5rem;
-      margin: 0.625rem 0;
+      margin: 0.9375rem 0;
       border-color: var(--colorprincipal);
     }
   }
 }
 
 /* ------ FINAL TODAYS MENU --------------*/
+
+
+
 
 /* ------ INICIO MEDIA QUERIES --------------*/
 
@@ -368,6 +409,24 @@ section#aboutus figure:hover :is(.imagen, .marco) {
     border-bottom: 0;
     border-left: 1px solid #aaa;
   }
+  main #menu.container {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 5%;
+
+      & div.menu-desayunos{
+        width: 40%;
+
+        & div{
+          padding-top: 2.1875rem;
+        }
+      }
+
+      & .carta{
+        width: 60%;
+        padding-top: 1.375rem;
+      }
+    }
 
   section#aboutus .flex {
     flex-direction: row;
@@ -398,6 +457,13 @@ section#aboutus figure:hover :is(.imagen, .marco) {
   main .grid article:last-child {
     grid-column: auto;
   }
+
+  #news{
+    & div{
+      width: calc(33.333% - 20px);
+    }
+  
+  }
 }
 
 @media (min-width: 62.75rem) {
@@ -418,6 +484,31 @@ section#aboutus figure:hover :is(.imagen, .marco) {
   header .menu a {
     border: 0px;
     padding: 1.25rem 0rem 1.25rem 2.5rem;
+  }
+
+  main #menu.container {
+    justify-content: space-between;
+
+      & div.menu-desayunos{
+        width: 25%;
+      }
+
+      & .carta{
+        width: 66%;
+      }
+    }
+
+  main #menu.container .carta>div{
+    display: flex;
+    height: auto;
+
+    & figure{
+      width: 24%;
+    }
+
+    & div{
+      padding-left: 0.9375rem;
+    }
   }
 }
 
